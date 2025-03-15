@@ -2,13 +2,14 @@ let prompt=document.querySelector("#prompt")
 let submitbtn=document.querySelector("#submit")
 let chatContainer=document.querySelector(".chat-container")
 let voice=document.querySelector("#voice")
-let ApiKey=AIzaSyBnDgh9666xaM8BLzQbNDDW-KjBjMCGVrA;
+let ApiKey="AIzaSyBnDgh9666xaM8BLzQbNDDW-KjBjMCGVrA";
 let btn = document.getElementById("btn")
 let imagebtn=document.querySelector("#image")
 let image=document.querySelector("#image img")
 let imageinput= document.querySelector("#image input")
+ApiKey = ApiKey.replace(/['"]+/g, '');
 
-const Api_Url="https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=`${ApiKey}`";
+const Api_Url=`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${ApiKey}`;
 let user={
     message:null,
     file:{
