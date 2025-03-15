@@ -19,49 +19,6 @@ let user={
 
 }
 
-// _______________________________________________________________
-
-
-// async function generateResponse(aiChatBox) {
-
-//     let text=aiChatBox.querySelector(".ai-chat-area")
-
-//    let RequestOption={
-//     method:"POST",
-//     headers:{'Content-Type': 'application/json'},
-//     body:JSON.stringify({
-//             "contents": [
-//                 {"parts":[{"text": user.message},(user.file.data?[{"inline_data":user.file}]:[])
-//                 ]
-//               }]
-//         })
-//     }
-
-//     try{
-//         let response=await fetch(Api_Url,RequestOption)
-//         let data=await response.json()
-//         let apiResponse=data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g,"$1").trim()
-        
-        
-//        text.innerHTML=apiResponse
-        
-        
-//     }
-//     catch(error){
-//         console.log(error);
-//     }
-//     finally{
-//         chatContainer.scrollTo({top:chatContainer.scrollHeight,behavior:"smooth"})
-//             image.src=`img.svg`
-//             image.classList.remove("choose") 
-//             user.file={}
-
-//     }
-    
-// }
-
-// ___________________________________________________________
-
 async function generateResponse(aiChatBox) {
     let text = aiChatBox.querySelector(".ai-chat-area");
 
