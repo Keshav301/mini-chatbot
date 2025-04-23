@@ -36,8 +36,9 @@ async function generateResponse(aiChatBox) {
         let response = await fetch(Api_Url, RequestOption);
         let data = await response.json();
         let apiResponse = data.candidates[0].content.parts[0].text;
-        
-        apiResponse = apiResponse.replace(/\*\*(.*?)\*\*/g, "$1").replace(/\. /g, ".<br><br>"); //.replace(/\*/g, "").trim(); //"add for rwmove single*"
+        apiResponse = apiResponse.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>").replace(/\. /g, ".<br><br>").trim();
+
+        //apiResponse = apiResponse.replace(/\*\*(.*?)\*\*/g, "$1").replace(/\. /g, ".<br><br>"); //.replace(/\*/g, "").trim(); //"add for rwmove single*"
         // let apiResponse=data.candidates[0].content.parts[0].text.replace(/\*\*(.*?)\*\*/g,"$1").trim()
         let extractedCode = extractFirstCodeBlock(apiResponse);
 
