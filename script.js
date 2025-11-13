@@ -9,7 +9,7 @@ let image=document.querySelector("#image img")
 let imageinput= document.querySelector("#image input")
 ApiKey = ApiKey.replace(/['"]+/g, '');
 
-const Api_Url=`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${ApiKey}`;
+const Api_Url=`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${ApiKey}`;
 let user={
     message:null,
     file:{
@@ -171,4 +171,5 @@ imageinput.addEventListener("change",()=>{
 imagebtn.addEventListener("click",()=>{
     imagebtn.querySelector("input").click()
 })
+
 
