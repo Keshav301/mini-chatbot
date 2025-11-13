@@ -2,14 +2,14 @@ let prompt=document.querySelector("#prompt")
 let submitbtn=document.querySelector("#submit")
 let chatContainer=document.querySelector(".chat-container")
 let voice=document.querySelector("#voice")
-let ApiKey="AIzaSyBnDgh9666xaM8BLzQbNDDW-KjBjMCGVrA";
+let ApiKey="AIzaSyCKQfNuDyX7nGLaJLrTYDFZDrWfnm3AY0o"; //AIzaSyD2eOnBx1Wl7ueR-GDdlT7crK9uRXv4Lv0
 let btn = document.getElementById("btn")
 let imagebtn=document.querySelector("#image")
 let image=document.querySelector("#image img")
 let imageinput= document.querySelector("#image input")
 ApiKey = ApiKey.replace(/['"]+/g, '');
 
-const Api_Url=`https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${ApiKey}`;
+const Api_Url=`https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${ApiKey}`;
 let user={
     message:null,
     file:{
@@ -171,3 +171,4 @@ imageinput.addEventListener("change",()=>{
 imagebtn.addEventListener("click",()=>{
     imagebtn.querySelector("input").click()
 })
+
