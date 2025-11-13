@@ -12,7 +12,7 @@ let imageinput = document.querySelector("#image-input"); // Updated ID to match 
 ApiKey = ApiKey.replace(/['"]+/g, "");
 
 // Ensure your key is correct and your project is configured for the Gemini API
-const Api_Url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${ApiKey}`;
+const Api_Url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${ApiKey}`;
 
 let user = {
     message: null,
@@ -198,3 +198,4 @@ imageinput.addEventListener("change", () => {
 imagebtn.addEventListener("click", () => {
     imageinput.click(); // Trigger the hidden file input
 });
+
