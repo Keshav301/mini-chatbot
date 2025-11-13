@@ -2,7 +2,7 @@ let prompt=document.querySelector("#prompt")
 let submitbtn=document.querySelector("#submit")
 let chatContainer=document.querySelector(".chat-container")
 let voice=document.querySelector("#voice")
-let ApiKey="AIzaSyBnDgh9666xaM8BLzQbNDDW-KjBjMCGVrA";
+let ApiKey="AIzaSyCGGRFNZGXtnOd0CGMDOz7DyCi6XQZ79Pg";
 let btn = document.getElementById("btn")
 let imagebtn=document.querySelector("#image")
 let image=document.querySelector("#image img")
@@ -171,3 +171,4 @@ imageinput.addEventListener("change",()=>{
 imagebtn.addEventListener("click",()=>{
     imagebtn.querySelector("input").click()
 })
+
