@@ -10,7 +10,9 @@ let imageinput = document.querySelector("#image input");
 
 ApiKey = ApiKey.replace(/['"]+/g, "");
 
-const Api_Url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${ApiKey}`;
+// const Api_Url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${ApiKey}`;
+// const Api_Url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key=${ApiKey}`;
+const Api_Url = `https://generativelanguage.googleapis.com/v1beta/models?key=${ApiKey}`;
 
 let user = {
   message: null,
@@ -191,3 +193,4 @@ imageinput.addEventListener("change", () => {
 imagebtn.addEventListener("click", () => {
   imagebtn.querySelector("input").click();
 });
+
